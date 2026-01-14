@@ -78,8 +78,7 @@ const AdminLogin: React.FC<AdminLoginProps> = ({ onLogin, onNavigate }) => {
                     <button
                         type="submit"
                         disabled={isLoading}
-                        className={`w-full py-4 bg-gradient-to-r from-purple-600 to-amber-600 text-white font-black rounded-xl shadow-xl transform transition-all hover:scale-105 flex items-center justify-center gap-3 ${isLoading ? 'opacity-70 cursor-not-allowed' : ''
-                            }`}
+                        className={`w-full py-4 bg-gradient-to-r from-purple-600 to-amber-600 text-white font-black rounded-xl shadow-xl transform transition-all hover:scale-105 flex items-center justify-center gap-3 ${isLoading ? 'opacity-70 cursor-not-allowed' : ''}`}
                     >
                         {isLoading ? (
                             <>
@@ -99,12 +98,6 @@ const AdminLogin: React.FC<AdminLoginProps> = ({ onLogin, onNavigate }) => {
                     >
                         ← Back to Home
                     </button>
-                </div>
-
-                <div className="mt-8 p-4 bg-amber-50 rounded-xl border-2 border-amber-200">
-                    <p className="text-xs text-amber-700 font-bold uppercase tracking-widest mb-1">Demo Credentials</p>
-                    <p className="text-sm text-amber-800 font-medium">Username: <code className="bg-amber-100 px-2 py-0.5 rounded">admin</code></p>
-                    <p className="text-sm text-amber-800 font-medium">Password: <code className="bg-amber-100 px-2 py-0.5 rounded">hudt2026admin</code></p>
                 </div>
             </div>
         </div>
