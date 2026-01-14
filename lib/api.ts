@@ -2,7 +2,7 @@
 // Handles all HTTP requests to the backend
 
 // Use environment variable for production, fallback to localhost for dev
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001/api';
+const API_BASE_URL = (import.meta.env.VITE_API_URL || 'http://localhost:3001/api').replace(/\/$/, '');
 
 // Helper to get auth headers
 const getAuthHeaders = (): Record<string, string> => {
@@ -15,7 +15,10 @@ async function apiRequest<T>(
     endpoint: string,
     options: RequestInit = {}
 ): Promise<T> {
-    const url = `${API_BASE_URL}${endpoint}`;
+    const cleanEndpoint = endpoint.startsWith('/') ? endpoint : `/${endpoint}`;
+    const url = `${API_BASE_URL}${cleanEndpoint}`;
+
+    console.log(`🚀 Requesting: ${url}`); // Helpful for debugging in browser console
 
     const config: RequestInit = {
         ...options,
