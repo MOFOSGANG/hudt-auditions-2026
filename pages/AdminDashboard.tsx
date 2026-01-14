@@ -507,6 +507,12 @@ const AdminDashboard: React.FC<AdminDashboardProps> = ({ onLogout, onNavigate })
                                                             >
                                                                 View
                                                             </button>
+                                                            <button
+                                                                onClick={() => setShowDeleteConfirm(app.id)}
+                                                                className="px-3 py-1 bg-red-100 text-red-700 rounded-lg text-xs font-bold hover:bg-red-200"
+                                                            >
+                                                                Delete
+                                                            </button>
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -602,6 +608,35 @@ const AdminDashboard: React.FC<AdminDashboardProps> = ({ onLogout, onNavigate })
                                     className="w-full py-3 bg-purple-600 hover:bg-purple-700 text-white font-bold rounded-xl"
                                 >
                                     Done
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                )
+            }
+
+            {/* Delete Confirmation Modal */}
+            {
+                showDeleteConfirm && (
+                    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-[60] p-4">
+                        <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 text-center">
+                            <div className="w-20 h-20 bg-red-100 text-red-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                                <span className="text-4xl">⚠️</span>
+                            </div>
+                            <h3 className="text-2xl font-black text-purple-900 mb-2">Are you sure?</h3>
+                            <p className="text-gray-600 mb-8">This action cannot be undone. This application will be permanently removed from the records.</p>
+                            <div className="flex gap-4">
+                                <button
+                                    onClick={() => setShowDeleteConfirm(null)}
+                                    className="flex-1 py-3 bg-gray-100 hover:bg-gray-200 text-gray-700 font-bold rounded-xl transition-colors"
+                                >
+                                    Cancel
+                                </button>
+                                <button
+                                    onClick={() => handleDelete(showDeleteConfirm)}
+                                    className="flex-1 py-3 bg-red-500 hover:bg-red-600 text-white font-bold rounded-xl transition-colors shadow-lg shadow-red-200"
+                                >
+                                    Delete Now
                                 </button>
                             </div>
                         </div>
