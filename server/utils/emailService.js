@@ -68,7 +68,7 @@ HUDT Recruitment Team
 Great news! Your audition has been scheduled!
 
 📅 Date & Time: {auditionSlot}
-📍 Venue: Main Theatre Hall, Arts Building, Hallmark University
+📍 Venue: Auditorium, Hallmark University
 
 What to bring:
 - A prepared monologue or performance piece (2-3 minutes)

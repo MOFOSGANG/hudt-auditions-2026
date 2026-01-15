@@ -197,7 +197,7 @@ const StatusChecker: React.FC<StatusCheckerProps> = ({ onNavigate }) => {
                       {result.auditionSlot}
                     </div>
                   )}
-                  <p className="text-gray-600 font-medium italic">Venue: Main Theatre Hall, Arts Building</p>
+                  <p className="text-gray-600 font-medium italic">Venue: Auditorium</p>
                 </div>
               )}
               {result.status === 'Under Review' && (

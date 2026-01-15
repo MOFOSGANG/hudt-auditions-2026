@@ -91,24 +91,16 @@ const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
                 <div className="grid md:grid-cols-2 gap-6 mb-8">
                   <div className="flex items-center gap-3 text-lg font-bold text-gray-700">
                     <span className="text-purple-600"><Icons.Calendar /></span>
-                    January 20-21, 2026
-                  </div>
-                  <div className="flex items-center gap-3 text-lg font-bold text-gray-700">
-                    <span className="text-purple-600">⏰</span>
-                    10:00 AM & 2:00 PM Slots
+                    February 28, 2026
                   </div>
                   <div className="flex items-center gap-3 text-lg font-bold text-gray-700 md:col-span-2">
                     <span className="text-purple-600"><Icons.Location /></span>
-                    Main Theatre Hall, Arts Building
+                    Auditorium
                   </div>
                 </div>
                 
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mb-8">
-                  {['Slot A: 10AM', 'Slot B: 2PM', 'Slot C: 10AM', 'Slot D: 2PM'].map((slot, i) => (
-                    <div key={i} className="bg-amber-100 text-amber-800 py-2 px-4 rounded-lg font-bold text-sm text-center">
-                      {slot}
-                    </div>
-                  ))}
+                <div className="bg-amber-100 text-amber-800 py-3 px-6 rounded-lg font-bold text-center mb-8">
+                  📅 Single Audition Day: February 28, 2026
                 </div>
                 
                 <button 

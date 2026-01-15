@@ -266,11 +266,7 @@ const ApplicationForm: React.FC<ApplicationFormProps> = ({ onSubmit, onCancel })
                 name="preferredSlot" value={formData.preferredSlot} onChange={handleChange}
                 className="w-full p-4 rounded-xl border-2 border-purple-200 font-semibold"
               >
-                <option>Flexible - Any available slot</option>
-                <option>January 20, 2026 - 10:00 AM</option>
-                <option>January 20, 2026 - 2:00 PM</option>
-                <option>January 21, 2026 - 10:00 AM</option>
-                <option>January 21, 2026 - 2:00 PM</option>
+                <option>February 28, 2026 - Auditorium</option>
               </select>
             </div>
           </div>
